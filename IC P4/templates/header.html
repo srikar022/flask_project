@@ -1,0 +1,57 @@
+<div>
+  <style>
+  .imgs-50 {
+    height: 50px;
+  }
+  </style>
+	<header>
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-dark" style="padding-bottom: 0px;">
+      <div class="col-sm-1">
+        <img src="/static/imgs/farm3.jpeg" alt="logo" height="60px"class="rounded-circle"></div>
+        <p class="navbar-brand mx-4" href="#"><font size="6" style="color:orange"> Direct Farm Marketing</font></p>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/home"style="color:white">Home</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about"style="color:white">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact"style="color:white">Contact us</a>
+      </li>
+      <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      </form>
+      <a class="" href="/signup"style="color:white;padding-left:10px;padding-top: 8px">Signup</a>
+      
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                {% if not cur_user['email'] %}
+                    <div style="padding-bottom: 5px">
+                    <a href="/login" style="font-size:15px;color:white;padding-left: 10px;text-decoration: None;"><i class="" style="font-size:22px;color:white;"> </i>Signin</a>
+                  </div>
+                {% endif %}
+                {% if cur_user['user_id'] %}
+                    <a href="/logout" style="font-size:15px;color:white;padding-left:10px;text-decoration: None;"><i class="" style="font-size:22px;color:white"> </i> Logout</a>
+                {% endif %}
+            </li>
+          </ul>
+          <div id="google_translate_element"style="padding-left: 50px"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        </div>
+      </div>
+    </nav>
+   </header>
+</div>

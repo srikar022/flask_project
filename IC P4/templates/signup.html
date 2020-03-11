@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!--  Step 2: In the <body> tag, add the below button and div -->
+  <br><br><br>
+<div class="container">
+        <div class="row">
+      <div class="col-md-5 mx-auto">
+      <div id="first">
+        <div class="myform form ">
+           <div class="logo mb-3">
+             <div class="col-md-12 text-center">
+              <h1>SignUp</h1>
+             </div>
+          </div>
+                   <form action="{{url_for('Add_User')}}" method="post" name="login">
+                            <div class="form-group">
+                              <label>First Name</label>
+                              <input type="text" name="fname"  class="form-control" id="fname" placeholder="Enter First Name">
+                           </div>
+                           <div class="form-group">
+                              <label >Last Name</label>
+                              <input type="text" name="lname"  class="form-control" id="lname" placeholder="Enter Last Name">
+                           </div>
+                           <div class="form-group">
+                              <label >Mobile Number</label>
+                              <input type="text" name="MobileNumber"  class="form-control" id="mnumber" placeholder="Enter Mobile Number">
+                           </div>
+                           <div class="form-group">
+                              <label for="exampleInputEmail1">Email</label>
+                              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                           </div>
+                           <div class="form-group">
+                              <label for="exampleInputEmail1">Password</label>
+                              <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
+                           </div>
+                           <div class="col-md-12 text-center ">
+                              <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">SignUp</button>
+                           </div>
+                           </div>
+
+
+<!--  Step 3: Add the below script before the ending </body> tag -->
+
+{% endblock %}
